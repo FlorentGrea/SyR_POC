@@ -7,7 +7,7 @@ import Link from "next/link"
 
 export default async function Home() {
   const pb = new PocketBase(process.env.NEXT_PUBLIC_DB_ADDR);
-  const mapPoints = await pb.collection('MapPoints').getFullList()
+  const mapPoints = await pb.collection('MapPoints').getFullList({ revalidate: 60 })
 
   return (
     <main className="relative flex flex-col">
