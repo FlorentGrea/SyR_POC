@@ -82,7 +82,7 @@ export default function Map({ mapPoints }: any) {
                             </Popup>
                         )}
                         { (selectedLocation === point.id) ? (
-                            <article className='absolute bottom-2 mx-auto left-0 right-0 flex flex-row sm:hidden h-24 w-64 bg-white border rounded-lg overflow-hidden'>
+                            <article className='absolute bottom-2 mx-auto left-0 right-0 flex flex-row md:hidden h-24 w-64 bg-white border rounded-lg overflow-hidden'>
                                 <div className='relative h-full w-[40%]'>
                                     { imageSrc ?
                                         <Image
@@ -95,7 +95,7 @@ export default function Map({ mapPoints }: any) {
                                     :
                                         <div className='bg-red-300' />
                                     }
-                                    <button className='absolute top-2 left-2 h-2 w-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
+                                    <button className='absolute top-2 left-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
                                         <XIcon className='filter-white' />
                                     </button>
                                 </div>

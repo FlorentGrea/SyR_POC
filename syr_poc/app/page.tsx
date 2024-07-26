@@ -10,12 +10,12 @@ export default async function Home() {
   const mapPoints = await pb.collection('MapPoints').getFullList()
 
   return (
-    <main className="flex flex-col">
-      <section className="h-[50vh] w-full border rounded-lg overflow-hidden">
+    <main className="relative flex flex-col">
+      <section className="lg:fixed h-[40vh] sm:h-[50vh] lg:h-[87vh] w-full lg:w-[40%] lg:right-[5%] border rounded-lg overflow-hidden">
           <Map mapPoints={mapPoints} />
       </section>
-      <section className="w-full py-2 lg:py-6">
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <section className="w-full py-2 lg:py-0 lg:w-[55%]">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
           { mapPoints.map((point) => {
             const imageSrc = point.images[0] ? process.env.NEXT_PUBLIC_DB_ADDR + 'api/files/' + point.collectionId + '/' + point.id + '/' + point.images[0] : ''
 

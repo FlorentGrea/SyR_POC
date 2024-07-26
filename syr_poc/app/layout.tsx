@@ -22,7 +22,7 @@ export default function RootLayout({
         <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v3.5.2/mapbox-gl.css' rel='stylesheet' />
       </head>
       <body className={inter.className + ' flex flex-col min-h-[100vh]'}>
-        <header className="relative flex justify-end my-3 mx-[2%] lg:mx-[10%]">
+        <header className="relative flex justify-end my-3 mx-[2%] lg:mx-[5%]">
           <div className="absolute w-full top-[0.5rem] mx-auto text-center">
             SyR - Logo
           </div>
@@ -30,10 +30,10 @@ export default function RootLayout({
             <NavButton />
           </nav>
         </header>
-        <main className="flex-grow mx-[2%] lg:mx-[10%]">
+        <main className="flex-grow mx-[2%] lg:mx-[5%]">
           {children}
         </main>
-        <footer className="m-auto px-[2%] lg:px-[10%] py-3">
+        <footer className="m-auto px-[2%] lg:px-[5%] py-3">
           Syr
         </footer>
       </body>
