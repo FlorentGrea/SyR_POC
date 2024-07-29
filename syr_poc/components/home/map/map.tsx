@@ -2,6 +2,7 @@
 
 import { BicycleIcon, BoatIcon, CarIcon, MeetIcon, PlaneIcon, VanIcon, XIcon } from '@/components/ui/icons';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import ReactMapGl, { Marker, Popup } from 'react-map-gl';
 
@@ -56,8 +57,8 @@ export default function Map({ mapPoints }: any) {
                                 longitude={point.longitude}
                                 latitude={point.latitude}
                             >
-                                <article className='flex flex-col h-52 w-64'>
-                                    <div className='relative h-[60%] w-full'>
+                                <Link href={`/cards/${point.id}`} className='flex flex-col h-52 w-64'>
+                                    <div className='h-[60%] w-full'>
                                         { imageSrc ?
                                             <Image
                                                 src={imageSrc}
@@ -69,41 +70,43 @@ export default function Map({ mapPoints }: any) {
                                         :
                                             <div className='bg-red-300' />
                                         }
-                                        <button className='absolute top-2 right-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
-                                            <XIcon className='filter-white' />
-                                        </button>
                                     </div>
                                     <div className='flex flex-col p-2 w-full'>
                                         <h3 className='truncate font-bold text-md'>{point.title}</h3>
                                         <h4 className='truncate test-sm'>{point.location}</h4>
                                         <h5 className='truncate text-xs'>{new Date(point.date).toDateString()}</h5>
                                     </div>
-                                </article>
+                                </Link>
+                                <button className='absolute top-2 right-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
+                                    <XIcon className='filter-white' />
+                                </button>
                             </Popup>
                         )}
                         { (selectedLocation === point.id) ? (
-                            <article className='absolute bottom-2 mx-auto left-0 right-0 flex flex-row md:hidden h-24 w-64 bg-white border rounded-lg overflow-hidden'>
-                                <div className='relative h-full w-[40%]'>
-                                    { imageSrc ?
-                                        <Image
-                                            src={imageSrc}
-                                            width={1500}
-                                            height={1500}
-                                            alt={point.title}
-                                            className="object-cover w-full h-full"
-                                        />
-                                    :
-                                        <div className='bg-red-300' />
-                                    }
-                                    <button className='absolute top-2 left-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
-                                        <XIcon className='filter-white' />
-                                    </button>
-                                </div>
-                                <div className='flex flex-col p-2 w-60%'>
-                                    <h3 className='truncate font-bold text-md'>{point.title}</h3>
-                                    <h4 className='truncate test-sm'>{point.location}</h4>
-                                    <h5 className='truncate text-xs'>{new Date(point.date).toDateString()}</h5>
-                                </div>
+                            <article className='absolute bottom-2 left-0 right-0 mx-auto h-24 w-64'>
+                                <Link href={`/cards/${point.id}`} className='flex flex-row md:hidden w-full h-full bg-white border rounded-lg overflow-hidden'>
+                                    <div className='h-full w-[40%]'>
+                                        { imageSrc ?
+                                            <Image
+                                                src={imageSrc}
+                                                width={1500}
+                                                height={1500}
+                                                alt={point.title}
+                                                className="object-cover w-full h-full"
+                                            />
+                                        :
+                                            <div className='bg-red-300' />
+                                        }
+                                    </div>
+                                    <div className='flex flex-col p-2 w-60%'>
+                                        <h3 className='truncate font-bold text-md'>{point.title}</h3>
+                                        <h4 className='truncate test-sm'>{point.location}</h4>
+                                        <h5 className='truncate text-xs'>{new Date(point.date).toDateString()}</h5>
+                                    </div>
+                                </Link>
+                                <button className='absolute bottom-[68%] left-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
+                                    <XIcon className='filter-white' />
+                                </button>
                             </article>
                         ) : false}
                     </div>

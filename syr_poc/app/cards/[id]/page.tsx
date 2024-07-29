@@ -1,7 +1,7 @@
 import PocketBase from 'pocketbase';
 import Image from 'next/image';
 
-export default async function Card({ params }: any) {
+export default async function PointCard({ params }: any) {
     const pb = new PocketBase(process.env.NEXT_PUBLIC_DB_ADDR);
     const point = await pb.collection('MapPoints').getOne(params.id)
     const imageSrc = point.images[0] ? process.env.NEXT_PUBLIC_DB_ADDR + 'api/files/' + point.collectionId + '/' + point.id + '/' + point.images[0] : ''
