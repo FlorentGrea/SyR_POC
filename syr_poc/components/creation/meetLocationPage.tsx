@@ -27,7 +27,7 @@ export default function MeetLocationPage({ newPoint, setNewPoint, setMeetLocatio
 
     return (
         <section className='flex flex-col justify-center'>
-            <h1 className='w-full text-center mb-3 text-xl font-bold'>where? (country, city, adress)</h1>
+            <h1 className='w-full text-center my-3 text-2xl font-bold text-macaroni-and-cheese-950'>where? (country, city, adress)</h1>
             <ReactGoogleAutocomplete
                 apiKey={process.env.NEXT_PUBLIC_GOOGLE_API_KEY}
                 options={{types: []}}
@@ -36,15 +36,15 @@ export default function MeetLocationPage({ newPoint, setNewPoint, setMeetLocatio
                 className='w-[90%] h-10 lg:w-[60%] m-auto text-center border rounded-lg'
             />
             <div className='flex flex-row justify-between w-[90%] lg:w-[60%] m-auto'>
-                <Button className='w-fit m-3' onClick={() => returnFunction()}>
+                <Button className='w-fit m-3 bg-macaroni-and-cheese-500 hover:bg-macaroni-and-cheese-600 text-macaroni-and-cheese-50' onClick={() => returnFunction()}>
                     <LeftArrowIcon className='w-5 h-5 filter-white' />
                 </Button>
                 { newPoint.location == '' ?
-                    <Button className='w-fit m-3' variant={'secondary'}>
-                        <RightArrowIcon className={'w-5 h-5'} />
+                    <Button className='w-fit m-3 bg-macaroni-and-cheese-100 text-macaroni-and-cheese-400' variant={'secondary'}>
+                        <RightArrowIcon className={'w-5 h-5 filter-mc-400'} />
                     </Button>
                 :
-                    <Button className='w-fit m-3' variant={'default'} onClick={() => changeToDatePage()}>
+                    <Button className='w-fit m-3 bg-macaroni-and-cheese-500 hover:bg-macaroni-and-cheese-600 text-macaroni-and-cheese-50' variant={'default'} onClick={() => changeToDatePage()}>
                         <RightArrowIcon className={'w-5 h-5 filter-white'} />
                     </Button>
                 }

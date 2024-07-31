@@ -19,6 +19,19 @@ const config = {
     },
     extend: {
       colors: {
+        'macaroni-and-cheese': {
+          '50': '#fff5ed',
+          '100': '#ffe8d5',
+          '200': '#ffbe8f',
+          '300': '#ffaa72',
+          '400': '#fd7b3a',
+          '500': '#fc5813',
+          '600': '#ed3d09',
+          '700': '#c42a0a',
+          '800': '#9c2310',
+          '900': '#7d1f11',
+          '950': '#440d06',
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

@@ -6,6 +6,54 @@
   filter: brightness(0) saturate(100%) invert(100%) sepia(12%) saturate(7500%) hue-rotate(185deg) brightness(112%) contrast(109%);
 }
 
+.filter-black{
+  filter: brightness(0) saturate(100%) invert(0%) sepia(95%) saturate(0%) hue-rotate(97deg) brightness(96%) contrast(104%);
+}
+
+.filter-mc-50{
+  filter: brightness(0) saturate(100%) invert(83%) sepia(22%) saturate(327%) hue-rotate(329deg) brightness(108%) contrast(103%);
+}
+
+.filter-mc-100{
+  filter: brightness(0) saturate(100%) invert(83%) sepia(22%) saturate(327%) hue-rotate(329deg) brightness(108%) contrast(103%);
+}
+
+.filter-mc-200{
+  filter: brightness(0) saturate(100%) invert(76%) sepia(30%) saturate(577%) hue-rotate(334deg) brightness(100%) contrast(103%);
+}
+
+.filter-mc-300{
+  filter: brightness(0) saturate(100%) invert(74%) sepia(24%) saturate(1124%) hue-rotate(327deg) brightness(102%) contrast(101%);
+}
+
+.filter-mc-400{
+  filter: brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(3253%) hue-rotate(335deg) brightness(101%) contrast(98%);
+}
+
+.filter-mc-500{
+  filter: brightness(0) saturate(100%) invert(53%) sepia(49%) saturate(7243%) hue-rotate(354deg) brightness(102%) contrast(98%);
+}
+
+.filter-mc-600{
+  filter: brightness(0) saturate(100%) invert(63%) sepia(98%) saturate(7397%) hue-rotate(6deg) brightness(101%) contrast(93%);
+}
+
+.filter-mc-700{
+  filter: brightness(0) saturate(100%) invert(20%) sepia(43%) saturate(4154%) hue-rotate(354deg) brightness(104%) contrast(102%);
+}
+
+.filter-mc-800{
+  filter: brightness(0) saturate(100%) invert(18%) sepia(60%) saturate(2768%) hue-rotate(350deg) brightness(94%) contrast(101%);
+}
+
+.filter-mc-900{
+  filter: brightness(0) saturate(100%) invert(12%) sepia(71%) saturate(2642%) hue-rotate(351deg) brightness(101%) contrast(95%);
+}
+
+.filter-mc-950{
+  filter: brightness(0) saturate(100%) invert(10%) sepia(19%) saturate(5881%) hue-rotate(342deg) brightness(102%) contrast(105%);
+}
+
 .react-datepicker__input-container input {
   @apply flex flex-row justify-center
 }

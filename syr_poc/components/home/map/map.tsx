@@ -1,6 +1,6 @@
 'use client'
 
-import { BicycleIcon, BoatIcon, CarIcon, MeetIcon, PlaneIcon, VanIcon, XIcon } from '@/components/ui/icons';
+import { BedIcon, BicycleIcon, BoatIcon, CarIcon, MeetIcon, PlaneIcon, VanIcon, XIcon } from '@/components/ui/icons';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -31,19 +31,19 @@ export default function Map({ mapPoints }: any) {
                             longitude={point.longitude}
                             latitude={point.latitude}
                         >
-                            <button onClick={() => setSelectedLocation(point.id)} className={'w-fit py-1 px-2 border rounded-full' + ((selectedLocation === point.id) ? ' bg-black z-20' : ' bg-white z-10')}>
+                            <button onClick={() => setSelectedLocation(point.id)} className={'w-fit py-1 px-2 border rounded-full' + ((selectedLocation === point.id) ? ' bg-macaroni-and-cheese-600 z-20' : ' bg-white z-10')}>
                                 { point.type == 'meeting' ?
-                                    <MeetIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
+                                    <MeetIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
                                 : point.type == 'carTrip' ?
-                                    <CarIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
+                                    <CarIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
                                 : point.type == 'vanTrip' ?
-                                    <VanIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
+                                    <VanIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
                                 : point.type == 'bicycleTrip' ?
-                                    <BicycleIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
+                                    <BicycleIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
                                 : point.type == 'boatTrip' ?
-                                    <BoatIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
-                                : point.type == 'planeTrip' ?
-                                    <PlaneIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) && 'filter-white')} />
+                                    <BoatIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
+                                : point.type == 'co-sleeping' ?
+                                    <BedIcon className={'h-5 w-5 ' + ((selectedLocation === point.id) ? 'filter-mc-50' : 'filter-mc-950')} />
                                 : false }
                             </button>
                         </Marker>
@@ -57,7 +57,7 @@ export default function Map({ mapPoints }: any) {
                                 longitude={point.longitude}
                                 latitude={point.latitude}
                             >
-                                <Link href={`/cards/${point.id}`} className='flex flex-col h-52 w-64'>
+                                <Link href={`/cards/${point.id}`} className='flex flex-col h-52 w-64 bg-white'>
                                     <div className='h-[60%] w-full'>
                                         { imageSrc ?
                                             <Image
@@ -71,20 +71,20 @@ export default function Map({ mapPoints }: any) {
                                             <div className='bg-red-300' />
                                         }
                                     </div>
-                                    <div className='flex flex-col p-2 w-full'>
-                                        <h3 className='truncate font-bold text-md'>{point.title}</h3>
-                                        <h4 className='truncate test-sm'>{point.location}</h4>
-                                        <h5 className='truncate text-xs'>{new Date(point.date).toDateString()}</h5>
+                                    <div className='flex flex-col p-2 pt-1 w-full'>
+                                        <h3 className='truncate font-bold text-lg text-macaroni-and-cheese-950'>{point.title}</h3>
+                                        <h4 className='truncate test-sm text-macaroni-and-cheese-600'>{point.location}</h4>
+                                        <h5 className='truncate text-xs text-macaroni-and-cheese-950'>{new Date(point.date).toDateString()}</h5>
                                     </div>
                                 </Link>
                                 <button className='absolute top-2 right-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
-                                    <XIcon className='filter-white' />
+                                    <XIcon className='filter-mc-50' />
                                 </button>
                             </Popup>
                         )}
                         { (selectedLocation === point.id) ? (
-                            <article className='absolute bottom-2 left-0 right-0 mx-auto h-24 w-64'>
-                                <Link href={`/cards/${point.id}`} className='flex flex-row md:hidden w-full h-full bg-white border rounded-lg overflow-hidden'>
+                            <article className='absolute md:hidden bottom-2 left-0 right-0 mx-auto h-24 w-64'>
+                                <Link href={`/cards/${point.id}`} className='flex flex-row w-full h-full bg-white border rounded-lg overflow-hidden'>
                                     <div className='h-full w-[40%]'>
                                         { imageSrc ?
                                             <Image
@@ -105,7 +105,7 @@ export default function Map({ mapPoints }: any) {
                                     </div>
                                 </Link>
                                 <button className='absolute bottom-[68%] left-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>
-                                    <XIcon className='filter-white' />
+                                    <XIcon className='filter-mc-50' />
                                 </button>
                             </article>
                         ) : false}
