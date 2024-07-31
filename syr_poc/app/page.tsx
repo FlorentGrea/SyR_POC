@@ -7,7 +7,7 @@
     return (
       <main className="flex flex-col">
         <section className="flex flex-col mb-8">
-          <div className="relative border rounded-lg overflow-hidden w-full aspect-square md:aspect-video my-3">
+          <div className="relative border rounded-lg overflow-hidden w-full aspect-square sm:aspect-video md:aspect-[32/9] my-3">
             <Image
               src={'/vanlifers.jpg'}
               height={1500}
