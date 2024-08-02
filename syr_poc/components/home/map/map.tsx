@@ -84,7 +84,7 @@ export default function Map({ mapPoints }: any) {
                         )}
                         { (selectedLocation === point.id) ? (
                             <article className='absolute md:hidden bottom-2 left-0 right-0 mx-auto h-24 w-64'>
-                                <Link href={`/cards/${point.id}`} className='flex flex-row w-full h-full bg-white border rounded-lg overflow-hidden'>
+                                <Link href={`/cards/${point.id}`} className='flex flex-row w-64 h-24 bg-white border rounded-lg overflow-hidden'>
                                     <div className='h-full w-[40%]'>
                                         { imageSrc ?
                                             <Image
@@ -99,9 +99,9 @@ export default function Map({ mapPoints }: any) {
                                         }
                                     </div>
                                     <div className='flex flex-col p-2 w-60%'>
-                                        <h3 className='truncate font-bold text-md'>{point.title}</h3>
-                                        <h4 className='truncate test-sm'>{point.location}</h4>
-                                        <h5 className='truncate text-xs'>{new Date(point.date).toDateString()}</h5>
+                                        <h3 className='w-36 truncate font-bold text-lg text-macaroni-and-cheese-950'>{point.title}</h3>
+                                        <h4 className='w-36 truncate test-sm text-macaroni-and-cheese-600'>{point.location}</h4>
+                                        <h5 className='w-36 truncate text-xs text-macaroni-and-cheese-950'>{new Date(point.date).toDateString()}</h5>
                                     </div>
                                 </Link>
                                 <button className='absolute bottom-[68%] left-2 bg-black/40 rounded-full focus:border-none' onClick={() => setSelectedLocation(0)}>

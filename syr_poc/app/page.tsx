@@ -109,10 +109,10 @@
           </div>
           <div className="relative border rounded-lg overflow-hidden w-full aspect-square sm:aspect-video md:aspect-[32/9] my-3">
             <Image
-              src={'/vanlifers.jpg'}
+              src={'/solution.jpg'}
               height={1500}
               width={1500}
-              alt='vanlifers'
+              alt='ourSolution'
               className="w-full h-full object-cover"
             />
             <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
@@ -125,13 +125,13 @@
           <div className="w-full sm:h-96 grid grid-cols-1 sm:grid-cols-2 gap-5 my-3">
             <div className="relative w-full h-96 sm:order-last aspect-square rounded-lg overflow-hidden">
               <Image
-                src={'/backpacker-3.jpg'}
+                src={'/smartphone.jpg'}
                 height={1500}
                 width={1500}
-                alt='backpacker-3'
+                alt='smartphone'
                 className="h-full object-cover"
               />
-              <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
+              <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_400%)]"/>
             </div>
             <div className="m-auto px-2">
               <p className="text-lg md:text-xl font-extrabold text-macaroni-and-cheese-950 text-pretty">
@@ -144,10 +144,10 @@
           <div className="w-full sm:h-96 grid grid-cols-1 sm:grid-cols-2 gap-5 mt-3 mb-8">
             <div className="relative w-full h-96 aspect-square rounded-lg overflow-hidden">
               <Image
-                src={'/backpacker-2.jpg'}
+                src={'/travelTogether.jpg'}
                 height={1500}
                 width={1500}
-                alt='backpacker-2'
+                alt='travelTogether'
                 className="h-full object-cover"
               />
               <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
@@ -194,55 +194,49 @@
             <div>
               <div className='relative w-full aspect-square border rounded-lg overflow-hidden'>
                 <Image
-                    src='/One-Does-Not-Simply.jpg'
+                    src='/Kevin.webp'
                     width={1500}
                     height={1500}
                     alt='photo de Kevin'
                     className="object-cover w-full h-full"
                 />
-              </div>
+            <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
+            </div>
               <div className='flex flex-col p-2 w-full'>
                 <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'>Kevin Tucholski</h3>
-                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & je sais pas quoi mettre</h4>
-                <p>
-                  It&apos;s the place for your description, should you speak about your role or about yourself? I don&apos;t know ¯\_(ツ)_/¯
-                </p>
+                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & Developer</h4>
               </div>
             </div>
             <div>
               <div className='relative w-full aspect-square border rounded-lg overflow-hidden'>
                 <Image
-                    src='/One-Does-Not-Simply.jpg'
+                    src='/Alexia.JPG'
                     width={1500}
                     height={1500}
-                    alt='photo de Kevin'
+                    alt="photo d'Alexia"
                     className="object-cover w-full h-full"
                 />
-              </div>
+            <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
+            </div>
               <div className='flex flex-col p-2 w-full'>
                 <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'>Alexia Jconaipalenom</h3>
-                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & je sais pas quoi mettre</h4>
-                <p>
-                  It&apos;s the place for your description, should you speak about your role or about yourself? I don&apos;t know ¯\_(ツ)_/¯
-                </p>
+                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & Online Business Manager</h4>
               </div>
             </div>
             <div>
               <div className='relative w-full aspect-square border rounded-lg overflow-hidden'>
                 <Image
-                    src='/One-Does-Not-Simply.jpg'
+                    src='/florent.jpeg'
                     width={1500}
                     height={1500}
-                    alt='photo de Kevin'
+                    alt='photo de Florent'
                     className="object-cover w-full h-full"
                 />
-              </div>
+            <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
+            </div>
               <div className='flex flex-col p-2 w-full'>
-                <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'><a href="https://www.linkedin.com/in/florent-grea-3a9b13137/" target="_blank">Florent Gréa</a></h3>
-                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & je sais pas quoi mettre</h4>
-                <p>
-                  It&apos;s the place for your description, should you speak about your role or about yourself? I don&apos;t know ¯\_(ツ)_/¯
-                </p>
+                <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'>Florent Gréa</h3>
+                <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & Developer</h4>
               </div>
             </div>
           </div>
