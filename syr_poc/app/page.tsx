@@ -219,7 +219,7 @@
             <div className="absolute top-0 w-full h-full bg-[linear-gradient(transparent_0%,rgb(156,35,16)_500%)]"/>
             </div>
               <div className='flex flex-col p-2 w-full'>
-                <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'>Alexia Jconaipalenom</h3>
+                <h3 className='truncate font-bold text-lg leading-none text-macaroni-and-cheese-950'>Alexia Cardona</h3>
                 <h4 className='truncate text-sm text-macaroni-and-cheese-600'>Co-founder & Online Business Manager</h4>
               </div>
             </div>
